@@ -722,3 +722,25 @@ footer strong {
         flex-direction: column;
     }
   }
+/* =========================
+   NEXORA LOGO
+========================= */
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .logo img {
+        width: 120px;
+    }
+}
