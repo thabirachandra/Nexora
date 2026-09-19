@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "NEXORA",
+  lastName: "",
+  name: "NEXORA",
+  role: "Creative Digital Studio",
+  avatar: "/images/logo.png",
+  email: "nexora.studio064@gmail.com",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Hindi", "Odia"], // optional: Leave the array empty if you don't want to display languages
   locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
@@ -26,25 +26,31 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/thabirachandra/Nexora",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
+    essential: false,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/nexora.studio064/",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
+    essential: false,
+  },
+  {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: "https://wa.me/919668331364",
     essential: true,
   },
   {
@@ -73,12 +79,12 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
       I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      <Text as="span" size="xl" weight="strong">DIGITAL CREATIVE SERVICES</Text>, where creativity meets technology. Web, video, social media and design — all in one place.
     </>
   ),
 };
@@ -104,14 +110,14 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        {person.firstName} is a creative digital studio helping brands, creators, and businesses build a strong digital presence.
+        Our services include video editing, web development, social media, graphic design, and digital creative solutions.
+        We combine creativity and technology to create modern digital experiences.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Work Experience",
     experiences: [
       {
@@ -157,32 +163,23 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // hidden for NEXORA
     title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
+    institutions: [],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Creative & Digital Services",
     skills: [
       {
-        title: "Figma",
+        title: "Video Editing",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Professional video editing for Instagram Reels, YouTube videos, Shorts, gaming edits, cinematic edits and basic edits.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Video Editing",
+            icon: "video",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -202,9 +199,9 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Web Development",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Modern responsive websites and web solutions for businesses, creators, and personal brands.</>
         ),
         tags: [
           {
@@ -230,6 +227,32 @@ const about: About = {
           },
         ],
       },
+      {
+        title: "Graphic Design",
+        description: (
+          <>Modern graphics, social media designs, thumbnails, banners, posters and visual branding for digital platforms.</>
+        ),
+        tags: [
+          {
+            name: "Graphic Design",
+            icon: "brush",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Social Media Marketing",
+        description: (
+          <>Social media content, page management, branding and creative strategies to help businesses and creators grow online.</>
+        ),
+        tags: [
+          {
+            name: "Social Media",
+            icon: "instagram",
+          },
+        ],
+        images: [],
+      },
     ],
   },
 };
@@ -246,8 +269,8 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  title: "Selected Work",
+  description: "A selection of creative digital projects by NEXORA.",
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -255,52 +278,9 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+  title: "NEXORA Gallery",
+  description: "NEXORA creative work and visual projects.",
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };

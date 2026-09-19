@@ -67,3 +67,100 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+/* NEXORA Premium Styling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  letter-spacing: -0.01em;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(40, 100, 255, 0.10), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(130, 70, 255, 0.08), transparent 30%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  text-shadow: 0 0 30px rgba(80, 120, 255, 0.18);
+}
+
+a,
+button {
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+img {
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+::selection {
+  background: rgba(70, 110, 255, 0.35);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 120, 255, 0.35);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 120, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    letter-spacing: -0.03em;
+  }
+
+  img:hover,
+  a:hover,
+  button:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
