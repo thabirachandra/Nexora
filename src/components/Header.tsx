@@ -1,4 +1,4 @@
-"use client";
+
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -76,10 +76,9 @@ export const Header = () => {
         <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
           {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
         </Row>
-        <Row fillWidth horizontal="center">
-          <a href="/Nexora/" aria-label="NEXORA">
-            <Image
-              src="/Nexora/images/logo.png"
+        <Row fillWidth horizontal="
+         <Image
+              src="/images/logo.png"
               alt="NEXORA"
               width={44}
               height={44}
