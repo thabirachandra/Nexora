@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
@@ -76,6 +77,16 @@ export const Header = () => {
           {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
         </Row>
         <Row fillWidth horizontal="center">
+          <a href="/Nexora/" aria-label="NEXORA">
+            <Image
+              src="/Nexora/images/logo.png"
+              alt="NEXORA"
+              width={44}
+              height={44}
+              priority
+              style={{ objectFit: "contain", borderRadius: "10px" }}
+            />
+          </a>
           <Row
             background="page"
             border="neutral-alpha-weak"
