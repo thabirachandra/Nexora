@@ -83,6 +83,7 @@ export const Header = () => {
               width={44}
               height={44}
               priority
+              unoptimized
               style={{ objectFit: "contain", borderRadius: "10px" }}
             />
           </a>
